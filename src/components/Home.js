@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import homeStyles from "../modules/home.module.scss";
 
 import Philosophy from "./Philosophy";
+import Product from "./Product";
 
 class Home extends Component {
   render() {
@@ -26,6 +27,7 @@ class Home extends Component {
           </p>
         </div>
         <Philosophy />
+        <Product />
       </div>
     );
   }

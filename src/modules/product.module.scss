@@ -1,0 +1,38 @@
+.title {
+  text-align: center;
+  font-size: 35px;
+  padding-top: 25px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.epigraph {
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 3%;
+  width: 75%;
+  left: 12.5%;
+  position: relative;
+  color: white;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+}
+
+.banner {
+  width: 100%;
+  background-color: #3cc47c;
+  position: relative;
+  top: 62px;
+  height: 300px;
+}
+
+.store {
+  text-align: center;
+  text-transform: uppercase;
+
+  color: white;
+}
+
+.store:hover {
+  color: black;
+}

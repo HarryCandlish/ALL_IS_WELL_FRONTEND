@@ -5,10 +5,12 @@ import store from "./store";
 
 import "./App.css";
 import Home from "./components/Home";
+import Nav from "./components/Nav";
 
 function App() {
   return (
     <Provider store={store}>
+      <Nav />
       <Router>
         <Route exact path="/" component={Home} />
       </Router>

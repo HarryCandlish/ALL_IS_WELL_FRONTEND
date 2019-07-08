@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchPhilosophy } from "../actions/philosophyAction";
+import philosophyStyles from "../modules/philosophy.module.scss";
 
 class Philosophy extends Component {
   componentWillMount() {
@@ -9,12 +10,26 @@ class Philosophy extends Component {
   render() {
     return (
       <div>
-        <h1>Our Philosophy</h1>
-        <ol>
+        <div className={philosophyStyles.banner}>
+          <h1 className={philosophyStyles.title}>Our Philosophy</h1>
+          <p className={philosophyStyles.epigraph}>
+            We believe that every company, to continue to move forward, must
+            have a philosophy. Our philosophy promotes the dignity and courage
+            it takes to fight mental illness. It's the belief that life will be
+            better and that this is a fight we are able to win.
+          </p>
+        </div>
+        <ol className={philosophyStyles.container}>
           {this.props.philosophy.map(philosophy => (
-            <li key={philosophy.id}>
-              <h1>{philosophy.title}</h1>
-              <p>{philosophy.description}</p>
+            <li className={philosophyStyles.flexbox} key={philosophy.id}>
+              <div className={philosophyStyles.titleDiv}>
+                <h1 className={philosophyStyles.flexTitle}>
+                  {philosophy.title}
+                </h1>
+              </div>
+              <p className={philosophyStyles.flexPara}>
+                {philosophy.description}
+              </p>
             </li>
           ))}
         </ol>

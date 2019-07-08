@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 12vh;
+  background-color: #3cc47c;
+}
+
+.title {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 22px;
+  color: white;
+}
+
+.navLinks {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+  letter-spacing: 3px;
+}
+
+a {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+}
+
+li {
+  list-style: none;
+}

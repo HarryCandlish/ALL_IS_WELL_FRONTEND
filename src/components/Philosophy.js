@@ -1,12 +1,8 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
-import { fetchPhilosophy } from "../actions/philosophyAction";
 import philosophyStyles from "../modules/philosophy.module.scss";
+import { connect } from "react-redux";
 
 class Philosophy extends Component {
-  componentWillMount() {
-    this.props.fetchPhilosophy();
-  }
   render() {
     return (
       <div>
@@ -38,11 +34,10 @@ class Philosophy extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  philosophy: state.philosophy.philosophy
-});
+function mapStateToProps(state) {
+  return {
+    philosophy: state.philosophy.philosophy
+  };
+}
 
-export default connect(
-  mapStateToProps,
-  { fetchPhilosophy }
-)(Philosophy);
+export default connect(mapStateToProps)(Philosophy);

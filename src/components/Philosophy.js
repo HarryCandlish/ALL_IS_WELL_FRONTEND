@@ -7,15 +7,17 @@ class Philosophy extends Component {
     this.props.fetchPhilosophy();
   }
   render() {
-    const philosophyPhilosophy = this.props.philosophy.map(philosophy => (
-      <div key={philosophy.id}>
-        <h1>{philosophy.title}</h1>
-      </div>
-    ));
     return (
       <div>
         <h1>Our Philosophy</h1>
-        {philosophyPhilosophy}
+        <ol>
+          {this.props.philosophy.map(philosophy => (
+            <li key={philosophy.id}>
+              <h1>{philosophy.title}</h1>
+              <p>{philosophy.description}</p>
+            </li>
+          ))}
+        </ol>
       </div>
     );
   }

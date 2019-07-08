@@ -1,0 +1,41 @@
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+.title {
+  font-size: 100px;
+  text-align: center;
+  padding-top: 14%;
+  letter-spacing: 35px;
+  word-spacing: -20px;
+  padding-bottom: 10%;
+  margin: 0;
+}
+
+.epigraph {
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 3%;
+  width: 75%;
+  left: 12.5%;
+  position: relative;
+  color: white;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+}
+
+.secondaryTitle {
+  text-align: center;
+  font-size: 35px;
+  padding-top: 25px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.banner {
+  width: 100%;
+  height: 300px;
+  background-color: #3cc47c;
+  position: relative;
+  top: 80px;
+}

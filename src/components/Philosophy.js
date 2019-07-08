@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
-import { fetchPhilosophy } from "../actions/philosophyAction";
 import philosophyStyles from "../modules/philosophy.module.scss";
 
 class Philosophy extends Component {

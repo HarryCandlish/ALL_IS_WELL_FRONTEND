@@ -1,0 +1,1 @@
+export const FETCH_PHILOSOPHY = "FETCH_PHILOSOPHY";

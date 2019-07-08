@@ -9,9 +9,6 @@ import { fetchPhilosophy } from "./actions/philosophyAction";
 import { connect } from "react-redux";
 
 export class App extends Component {
-  constructor() {
-    super();
-  }
   componentDidMount() {
     this.props.philosophy();
   }

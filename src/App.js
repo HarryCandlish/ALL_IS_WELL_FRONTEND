@@ -11,8 +11,12 @@ import { fetchPhilosophy } from "./actions/philosophyAction";
 import { connect } from "react-redux";
 
 export class App extends Component {
+  constructor() {
+    super();
+  }
   componentDidMount() {
     this.props.philosophy();
+    this.props.products();
   }
   render() {
     return (
@@ -20,7 +24,7 @@ export class App extends Component {
         <Nav />
         <Router>
           <Route exact path="/" component={Home} />
-          <Route exact path="/Store" component={Store} />
+          <Route exact path="#/Store" component={Store} />
         </Router>
       </div>
     );
@@ -29,13 +33,15 @@ export class App extends Component {
 
 const mapStateToProps = state => {
   return {
-    philosophy: state.philosophy
+    philosophy: state.philosophy,
+    products: state.products
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    philosophy: () => dispatch(fetchPhilosophy())
+    philosophy: () => dispatch(fetchPhilosophy()),
+    products: () => dispatch(fetchProducts())
   };
 };
 

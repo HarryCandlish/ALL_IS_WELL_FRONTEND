@@ -4,7 +4,9 @@ import { HashRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Home";
 import Nav from "./components/Nav";
+import Store from "./components/Store";
 
+import { fetchProducts } from "./actions/productsAction";
 import { fetchPhilosophy } from "./actions/philosophyAction";
 import { connect } from "react-redux";
 
@@ -18,6 +20,7 @@ export class App extends Component {
         <Nav />
         <Router>
           <Route exact path="/" component={Home} />
+          <Route exact path="/Store" component={Store} />
         </Router>
       </div>
     );

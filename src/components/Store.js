@@ -9,9 +9,9 @@ class Store extends Component {
       <div>
         <h1 className={storeStyles.title}>Store</h1>
         <ol>
-          {this.props.products.map(products => (
-            <li key={products.id}>
-              <p>{products.type}</p>
+          {this.props.products.map(product => (
+            <li key={product.id}>
+              <p>{product.type}</p>
             </li>
           ))}
         </ol>

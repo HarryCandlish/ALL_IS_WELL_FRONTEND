@@ -6,7 +6,6 @@ import Product from "./Product";
 import SuicideChart from "./SuicideChart";
 import MentalHealthChart from "./MentalHealthChart";
 import AgeChart from "./AgeChart";
-import Store from "./Store";
 
 class Home extends Component {
   render() {
@@ -35,7 +34,6 @@ class Home extends Component {
         <AgeChart />
         <Philosophy />
         <Product />
-        <Store />
       </div>
     );
   }

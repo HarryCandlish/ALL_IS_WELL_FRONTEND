@@ -2,7 +2,9 @@
 
 import { combineReducers } from "redux";
 import philosophyReducer from "./philosophyReducer";
+import productsReducer from "./productsReducer";
 
 export default combineReducers({
-  philosophy: philosophyReducer
+  philosophy: philosophyReducer,
+  products: productsReducer
 });

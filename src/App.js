@@ -4,9 +4,7 @@ import { HashRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Home";
 import Nav from "./components/Nav";
-import Store from "./components/Store";
 
-import { fetchProducts } from "./actions/productsAction";
 import { fetchPhilosophy } from "./actions/philosophyAction";
 import { connect } from "react-redux";
 
@@ -16,7 +14,6 @@ export class App extends Component {
   }
   componentDidMount() {
     this.props.philosophy();
-    this.props.products();
   }
   render() {
     return (
@@ -24,7 +21,6 @@ export class App extends Component {
         <Nav />
         <Router>
           <Route exact path="/" component={Home} />
-          <Route exact path="#/Store" component={Store} />
         </Router>
       </div>
     );
@@ -33,15 +29,13 @@ export class App extends Component {
 
 const mapStateToProps = state => {
   return {
-    philosophy: state.philosophy,
-    products: state.products
+    philosophy: state.philosophy
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    philosophy: () => dispatch(fetchPhilosophy()),
-    products: () => dispatch(fetchProducts())
+    philosophy: () => dispatch(fetchPhilosophy())
   };
 };
 

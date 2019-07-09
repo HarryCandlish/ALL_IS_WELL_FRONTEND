@@ -1,6 +1,21 @@
-.chartTwo {
+.suicideChart {
   width: 70%;
   position: relative;
   left: 15%;
   padding-top: 50px;
+}
+
+.title {
+  text-align: center;
+  font-size: 35px;
+  padding-top: 25px;
+  color: #3cc47c;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  text-align: center;
+  padding-top: 5%;
+  letter-spacing: 2px;
+  word-spacing: 2px;
 }

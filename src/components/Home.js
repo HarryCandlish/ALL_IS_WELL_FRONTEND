@@ -5,6 +5,7 @@ import Philosophy from "./Philosophy";
 import Product from "./Product";
 import SuicideChart from "./SuicideChart";
 import MentalHealthChart from "./MentalHealthChart";
+import AgeChart from "./AgeChart";
 
 class Home extends Component {
   render() {
@@ -30,6 +31,7 @@ class Home extends Component {
         </div>
         <MentalHealthChart />
         <SuicideChart />
+        <AgeChart />
         <Philosophy />
         <Product />
       </div>

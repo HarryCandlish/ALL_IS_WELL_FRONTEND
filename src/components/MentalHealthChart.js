@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Bar } from "react-chartjs-2";
+import { Line } from "react-chartjs-2";
 
 import mentalHealthChartStyles from "../modules/mentalHealthChart.module.scss";
 
@@ -8,35 +8,36 @@ class MentalHealthChart extends Component {
     super();
     this.state = {
       mentalHealthData: {
-        labels: ["2008", "2010", "2012", "2014", "2016", "2018"],
+        labels: ["2006", "2011", "2013", "2015", "2017"],
         datasets: [
           {
             label: "Depression",
-            data: [100, 157, 209, 250, 308],
-            backgroundColor: "black",
-            pointBorderColor: "black",
+            data: [10.4, 14.3, 15.5, 15.4, 16.6],
+            backgroundColor: "#d4a592",
+            pointBorderColor: "#d4a592",
             fill: false,
-            borderColor: "black"
+            borderColor: "#d4a592"
+          },
+          {
+            label: "Mood Disorders",
+            data: [12.7, 16.3, 18.6, 18.8, 20.9],
+            backgroundColor: "#f79e02",
+            fill: false,
+            borderColor: "#f79e02",
+            pointBorderColor: "#f79e02"
           },
           {
             label: "Anxiety",
-            data: [94, 123, 270, 309, 350],
-            backgroundColor: "#3cc47c",
+            data: [4.3, 6.1, 8.4, 9.5, 11.1],
+            backgroundColor: "#A8d0e6",
             fill: false,
-            borderColor: "#3cc47c",
-            pointBorderColor: "#3cc47c"
-          },
-          {
-            label: "Addiction",
-            data: [80, 130, 201, 247, 304],
-            backgroundColor: "grey",
-            fill: false,
-            borderColor: "grey",
-            pointBorderColor: "grey"
+            borderColor: "#A8d0e6",
+            pointBorderColor: "#A8d0e6"
           }
         ]
       },
       options: {
+        responsive: true,
         scales: {
           yAxes: [
             {
@@ -53,15 +54,15 @@ class MentalHealthChart extends Component {
   render() {
     return (
       <div>
-        <div className={mentalHealthChartStyles.chart}>
-          <Bar
+        <div className={mentalHealthChartStyles.healthChart}>
+          <h1 className={mentalHealthChartStyles.title}>Mental Health</h1>
+          <p className={mentalHealthChartStyles.paragraph}>
+            Data demonstrating the (%) of people living in New Zealand with
+            specific mental health issues.
+          </p>
+          <Line
             data={this.state.mentalHealthData}
             options={{
-              title: {
-                display: true,
-                text: "Mental Health",
-                fontSize: "20"
-              },
               legend: {
                 diplay: true,
                 position: "bottom"

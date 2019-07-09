@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Bar } from "react-chartjs-2";
+import { Line } from "react-chartjs-2";
 
 import suicideChartStyles from "../modules/suicideChart.module.scss";
 
@@ -9,19 +9,27 @@ class SuicideChart extends Component {
 
     this.state = {
       suicideChartData: {
-        labels: ["2008", "2010", "2012", "2014", "2016", "2018"],
+        labels: ["2007", "2009", "2011", "2013", "2015", "2017"],
         datasets: [
           {
-            label: "Youth Suicide",
-            data: [100, 157, 209, 250, 308],
-            backgroundColor: "black",
-            pointBorderColor: "black",
+            label: "Female",
+            data: [6.2, 6.29, 6.3, 6.26, 7.13, 7.79],
+            backgroundColor: "#f76c6c",
+            pointBorderColor: "#f76c6c",
             fill: false,
-            borderColor: "black"
+            borderColor: "#f76c6c"
           },
           {
-            label: "Adult Suicide",
-            data: [45, 120, 140, 200, 262],
+            label: "Male",
+            data: [19.35, 18.7, 18.58, 17.5, 17.71, 19.72],
+            backgroundColor: "#F8E9A1",
+            pointBorderColor: "#F8E9A1",
+            fill: false,
+            borderColor: "#F8E9A1"
+          },
+          {
+            label: "Total",
+            data: [12.2, 12.26, 12.34, 11.73, 12.33, 13.67],
             backgroundColor: "#3cc47c",
             pointBorderColor: "#3cc47c",
             fill: false,
@@ -30,6 +38,7 @@ class SuicideChart extends Component {
         ]
       },
       options: {
+        responsive: true,
         scales: {
           yAxes: [
             {
@@ -46,15 +55,14 @@ class SuicideChart extends Component {
   render() {
     return (
       <div>
-        <div className={suicideChartStyles.chartTwo}>
-          <Bar
+        <div className={suicideChartStyles.suicideChart}>
+          <h1 className={suicideChartStyles.title}>Suicide</h1>
+          <p className={suicideChartStyles.paragraph}>
+            Suicide in New Zealand per 100,000 people
+          </p>
+          <Line
             data={this.state.suicideChartData}
             options={{
-              title: {
-                display: true,
-                text: "Suicide",
-                fontSize: "20"
-              },
               legend: {
                 diplay: true,
                 position: "bottom"

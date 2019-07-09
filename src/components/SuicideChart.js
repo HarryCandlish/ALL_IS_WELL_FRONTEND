@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Line } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 
 import suicideChartStyles from "../modules/suicideChart.module.scss";
 
@@ -47,7 +47,7 @@ class SuicideChart extends Component {
     return (
       <div>
         <div className={suicideChartStyles.chartTwo}>
-          <Line
+          <Bar
             data={this.state.suicideChartData}
             options={{
               title: {

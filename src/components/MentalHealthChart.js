@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Line } from "react-chartjs-2";
+import { Bar } from "react-chartjs-2";
 
 import mentalHealthChartStyles from "../modules/mentalHealthChart.module.scss";
 
@@ -54,7 +54,7 @@ class MentalHealthChart extends Component {
     return (
       <div>
         <div className={mentalHealthChartStyles.chart}>
-          <Line
+          <Bar
             data={this.state.mentalHealthData}
             options={{
               title: {

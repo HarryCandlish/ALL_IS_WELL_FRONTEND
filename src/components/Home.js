@@ -3,6 +3,7 @@ import homeStyles from "../modules/home.module.scss";
 
 import Philosophy from "./Philosophy";
 import Product from "./Product";
+import SuicideChart from "./SuicideChart";
 
 class Home extends Component {
   render() {
@@ -26,6 +27,7 @@ class Home extends Component {
             do.
           </p>
         </div>
+        <SuicideChart />
         <Philosophy />
         <Product />
       </div>

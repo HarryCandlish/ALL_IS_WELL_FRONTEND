@@ -1,18 +1,17 @@
 import React, { Component } from "react";
 import { Line } from "react-chartjs-2";
 
-import suicideChartStyles from "../modules/suicideChart.module.scss";
+import mentalHealthChartStyles from "../modules/mentalHealthChart.module.scss";
 
-class SuicideChart extends Component {
+class MentalHealthChart extends Component {
   constructor() {
     super();
-
     this.state = {
-      suicideChartData: {
+      mentalHealthData: {
         labels: ["2008", "2010", "2012", "2014", "2016", "2018"],
         datasets: [
           {
-            label: "Youth Suicide",
+            label: "Depression",
             data: [100, 157, 209, 250, 308],
             backgroundColor: "black",
             pointBorderColor: "black",
@@ -20,12 +19,20 @@ class SuicideChart extends Component {
             borderColor: "black"
           },
           {
-            label: "Adult Suicide",
-            data: [45, 120, 140, 200, 262],
+            label: "Anxiety",
+            data: [94, 123, 270, 309, 350],
             backgroundColor: "#3cc47c",
-            pointBorderColor: "#3cc47c",
             fill: false,
-            borderColor: "#3cc47c"
+            borderColor: "#3cc47c",
+            pointBorderColor: "#3cc47c"
+          },
+          {
+            label: "Addiction",
+            data: [80, 130, 201, 247, 304],
+            backgroundColor: "grey",
+            fill: false,
+            borderColor: "grey",
+            pointBorderColor: "grey"
           }
         ]
       },
@@ -46,13 +53,13 @@ class SuicideChart extends Component {
   render() {
     return (
       <div>
-        <div className={suicideChartStyles.chartTwo}>
+        <div className={mentalHealthChartStyles.chart}>
           <Line
-            data={this.state.suicideChartData}
+            data={this.state.mentalHealthData}
             options={{
               title: {
                 display: true,
-                text: "Suicide",
+                text: "Mental Health",
                 fontSize: "20"
               },
               legend: {
@@ -67,4 +74,4 @@ class SuicideChart extends Component {
   }
 }
 
-export default SuicideChart;
+export default MentalHealthChart;

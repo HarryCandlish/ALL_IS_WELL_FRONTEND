@@ -21,7 +21,7 @@ export class App extends Component {
         <Nav />
         <Router>
           <Route exact path="/" component={Home} />
-          <Route exact path="#/store" component={Store} />
+          <Route exact path="/store" component={Store} />
         </Router>
       </div>
     );

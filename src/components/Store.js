@@ -8,10 +8,14 @@ class Store extends Component {
     return (
       <div>
         <h1 className={storeStyles.title}>Store</h1>
-        <ol>
+        <ol className={storeStyles.container}>
           {this.props.products.map(product => (
-            <li key={product.id}>
-              <p>{product.type}</p>
+            <li className={storeStyles.flexbox} key={product.id}>
+              <div className={storeStyles.titleBox}>
+                <h2 className={storeStyles.type}>{product.type}</h2>
+                <p className={storeStyles.storePara}>{product.size}</p>
+                <p className={storeStyles.storePara}>{product.price}</p>
+              </div>
             </li>
           ))}
         </ol>

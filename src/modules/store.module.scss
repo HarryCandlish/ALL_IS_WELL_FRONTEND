@@ -1,0 +1,75 @@
+.title {
+  font-size: 100px;
+  text-align: center;
+  padding-top: 20%;
+  letter-spacing: 35px;
+  word-spacing: -20px;
+  padding-bottom: 15%;
+  margin: 0;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.epigraph {
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 3%;
+  width: 75%;
+  left: 12.5%;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 98%;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5px;
+  padding-top: 8%;
+  margin: 0;
+  position: relative;
+}
+
+.flexbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center space-between;
+  width: 30%;
+  border-radius: 1%;
+  margin: 5px;
+  max-height: 250px;
+  margin-bottom: 25px;
+  text-align: center;
+  list-style-type: none;
+  text-decoration: none;
+  color: black;
+  margin-bottom: 250px;
+}
+
+.storePara {
+  font-size: 17px;
+  text-decoration-style: dashed;
+  color: white;
+  letter-spacing: 3px;
+  padding-top: 15px;
+}
+
+.banner {
+  width: 100%;
+  background-color: #3cc47c;
+  position: relative;
+}
+
+.titleBox {
+  background-color: #3cc47c;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.type {
+  color: white;
+  letter-spacing: 5px;
+}

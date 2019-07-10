@@ -4,6 +4,10 @@ import storeStyles from "../modules/store.module.scss";
 import { connect } from "react-redux";
 
 class Store extends Component {
+  handleClick = (e, product) => {
+    return (e.target.value = product);
+  };
+
   render() {
     return (
       <div>
@@ -16,6 +20,15 @@ class Store extends Component {
                 <p className={storeStyles.storePara}>{product.size}</p>
                 <p className={storeStyles.storePara}>{product.price}</p>
               </div>
+              <button
+                value={product.id}
+                onClick={e => {
+                  this.handleClick(e, product);
+                  window.location = `#/product/${product.id}`;
+                }}
+              >
+                Cart
+              </button>
             </li>
           ))}
         </ol>

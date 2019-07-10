@@ -55,20 +55,22 @@ class AgeChart extends Component {
   render() {
     return (
       <div>
-        <h1 className={ageChartStyles.title}>Suicide by Age</h1>
-        <p className={ageChartStyles.paragraph}>
-          Suicides per 100,000 people by age in New Zealand.
-        </p>
-        <div className={ageChartStyles.ageChart}>
-          <Line
-            data={this.state.youthChartData}
-            options={{
-              legend: {
-                diplay: true,
-                position: "bottom"
-              }
-            }}
-          />
+        <div className={ageChartStyles.container}>
+          <h1 className={ageChartStyles.title}>Suicide by Age</h1>
+          <p className={ageChartStyles.paragraph}>
+            Suicides per 100,000 people by age in New Zealand.
+          </p>
+          <div className={ageChartStyles.ageChart}>
+            <Line
+              data={this.state.youthChartData}
+              options={{
+                legend: {
+                  diplay: true,
+                  position: "bottom"
+                }
+              }}
+            />
+          </div>
         </div>
       </div>
     );
